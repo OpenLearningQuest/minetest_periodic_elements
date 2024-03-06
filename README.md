@@ -6,6 +6,12 @@ The Periodic Elements Mod for Minetest, designed specifically for OpenLearningQu
 
 1. Hydrogen Block
 2. Helium Block
+3. Lithium Block
+4. Beryllium Block
+5. Boron Block
+6. Carbon Block
+7. Nitrogen Block
+8. Oxygen Block
 
 ## Installation
 
