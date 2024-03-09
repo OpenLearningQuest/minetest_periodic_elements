@@ -46,3 +46,5 @@ minetest.register_node("periodic_elements:oxygen_block", {
     tiles = {"oxygen.png"},
     groups = {cracky = 3, stone = 1},
 })
+
+-- Water recipe
