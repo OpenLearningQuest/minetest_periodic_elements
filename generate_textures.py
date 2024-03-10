@@ -3,8 +3,8 @@ import csv
 from PIL import Image, ImageDraw, ImageFont
 
 IMAGE_SIZE = 128
-SYMBOL_PADDING_BOTTOM = IMAGE_SIZE // 5
-NUMBER_PADDING_TOP = IMAGE_SIZE // 20
+SYMBOL_MARGIN_BOTTOM = IMAGE_SIZE // 5
+NUMBER_MARGIN_TOP = IMAGE_SIZE // 20
 
 FONT_PATH = "./font.otf"
 SYMBOL_FONT_SIZE = IMAGE_SIZE // 2
@@ -44,7 +44,7 @@ def create_element_texture(number, symbol, group):
         )
 
     symbol_font = ImageFont.truetype(FONT_PATH, SYMBOL_FONT_SIZE)
-    detail_font = ImageFont.truetype(FONT_PATH, SYMBOL_NUMBER_FONT_SIZE)
+    number_font = ImageFont.truetype(FONT_PATH, SYMBOL_NUMBER_FONT_SIZE)
 
     # Position the symbol at the bottom half of the image
     symbol_bbox = draw.textbbox((0, 0), symbol, font=symbol_font)
@@ -52,11 +52,11 @@ def create_element_texture(number, symbol, group):
     symbol_height = symbol_bbox[3] - symbol_bbox[1]
     symbol_position = (
         (IMAGE_SIZE - symbol_width) / 2,
-        IMAGE_SIZE - symbol_height - SYMBOL_PADDING_BOTTOM,
+        IMAGE_SIZE - symbol_height - SYMBOL_MARGIN_BOTTOM,
     )
 
     # Position the element number at the upper left-hand corner
-    number_position = (NUMBER_PADDING_TOP, NUMBER_PADDING_TOP)
+    number_position = (NUMBER_MARGIN_TOP, NUMBER_MARGIN_TOP)
 
     # Draw the symbol and element number
     draw.text(
@@ -69,7 +69,7 @@ def create_element_texture(number, symbol, group):
         number_position,
         number,
         fill=TEXT_COLOR,
-        font=detail_font,
+        font=number_font,
     )
 
     # Save the image
