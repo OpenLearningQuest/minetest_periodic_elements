@@ -118,6 +118,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+To activate the virtual environment on Windows, run:
+
+```bash
+.venv\Scripts\activate
+```
+
 Run the script to generate the textures:
 
 ```bash
