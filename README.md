@@ -94,8 +94,45 @@ We welcome any feedback, suggestions, or contributions! Feel free to [open an is
 ## Credits
 
 - Mod developed by Victor Resende
+- [Minecraft Font](https://www.fontspace.com/minecraft-font-f28180) by [JDGraphics](https://www.fontspace.com/jdgraphics)
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+### Generating the textures
+
+Periodic elements metadata is contained in the `elements.csv` file.
+
+To generate the textures, run the `generate_textures.py` script as outlined below.
+
+Create a Python virtual environment and install the required packages:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+To activate the virtual environment on Windows, run:
+
+```bash
+.venv\Scripts\activate
+```
+
+Run the script to generate the textures:
+
+```bash
+python generate_textures.py
+```
+
+The textures will be generated in the `textures` directory.
 
 ## License
 
 This mod is licensed under the [MIT License](LICENSE.txt).
-All assets for Minetest Periodic Elements by Victor Andrade Resende are marked with CC0 1.0 
+All assets for Minetest Periodic Elements by Victor Andrade Resende are marked with CC0 1.0
